@@ -1,0 +1,80 @@
+/* Header */
+.header {
+    display: flex;
+    justify-content: center;  /* Căn giữa theo chiều ngang */
+    align-items: center;      /* Căn giữa theo chiều dọc */
+    flex-direction: column;   /* Xếp theo cột để logo và menu không bị lệch */
+    padding: 10px;
+    background-color: #ff6600;
+    text-align: center;
+}
+
+.logo img {
+    height: 80px;
+    width: 200px;
+    margin-bottom: 10px; /* Thêm khoảng cách giữa logo và menu */
+    background-color: white; /* Thêm nền trắng */
+    padding: 5px;  /* Thêm khoảng cách để tách ra */
+    border-radius: 5px; /* Bo góc nhẹ cho đẹp */
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Căn giữa các mục menu */
+    padding: 0;
+}
+
+.nav ul li {
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Banner */
+.banner {
+    background: url('images/banner.jpg') no-repeat center;
+    background-size: cover;
+    text-align: center;
+    padding: 50px;
+    color: black;
+    font-size: 24px;
+}
+
+/* Main content */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.section {
+    margin-bottom: 50px;
+}
+
+.activities, .news {
+    display: flex;
+    justify-content: space-between;
+}
+
+.activity, .news-item {
+    text-align: center;
+    width: 45%;
+}
+
+.activity img, .news-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    background-color: #ff6600;
+    color: white;
+    padding: 20px;
+}

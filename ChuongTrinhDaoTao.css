@@ -1,0 +1,128 @@
+/* Header */
+.header {
+    display: flex;
+    justify-content: center;  /* Căn giữa theo chiều ngang */
+    align-items: center;      /* Căn giữa theo chiều dọc */
+    flex-direction: column;   /* Xếp theo cột để logo và menu không bị lệch */
+    padding: 10px;
+    background-color: #ff6600;
+    text-align: center;
+}
+
+.logo img {
+    height: 80px;
+    width: 200px;
+    margin-bottom: 10px; /* Thêm khoảng cách giữa logo và menu */
+    background-color: white; /* Thêm nền trắng */
+    padding: 5px;  /* Thêm khoảng cách để tách ra */
+    border-radius: 5px; /* Bo góc nhẹ cho đẹp */
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Căn giữa các mục menu */
+    padding: 0;
+}
+
+.nav ul li {
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    background-color: #ff6600;
+    color: white;
+    padding: 10px;
+}
+/* phần trong bài*/
+body {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
+}
+
+.form-container {
+    display: flex;
+    max-width: 850px;
+    margin: auto;
+    background: #ff6600;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.form-left {
+    width: 40%;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.form-left h2 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.form-right {
+    width: 60%;
+    background: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.form-right img {
+    display: block;
+    margin: 0 auto 15px;
+    max-width: 150px;
+}
+
+.form-control {
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #ff6600;
+    color: white;
+    border: 2px solid #ff6600;
+    transition: transform 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #ff6600;
+    border: 2px solid #ff6600;
+    transform: scale(1.05);
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto;
+}

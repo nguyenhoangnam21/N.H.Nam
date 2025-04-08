@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu - Trường THPT FPT</title>
+    <link rel="stylesheet" href="GioiThieu.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <img src="logo FPT.png" alt="FPT Poly School Logo">
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="GioiThieu.html">Giới thiệu</a></li>
+                    <li><a href="HoatDong.html">Hoạt động</a></li>
+                    <li><a href="TuyenSinh.html">Tuyển sinh</a></li>
+                    <li><a href="Chuongtrinhdaotao.html">Chương trình đào tạo</a></li>
+                </ul>
+            </nav>
+        </header>
+    <div id="app" class="container">
+    
+        <h1 class="text-center">Giới thiệu về Trường THPT FPT</h1>
+        <p class="text-center text-muted">Nơi chắp cánh ước mơ và phát triển tài năng</p>
+        
+        <div class="section bg-light p-4 mb-3">
+            <h3>Tầm nhìn & Sứ mệnh</h3>
+            <p>{{ school.mission }}</p>
+        </div>
+
+        <div class="section bg-light p-4 mb-3">
+            <h3>Lịch sử hình thành & Phát triển</h3>
+            <p>{{ school.history }}</p>
+        </div>
+
+        <div class="section bg-light p-4 mb-3">
+            <h3>Sơ đồ tổ chức</h3>
+            <ul>
+                <li v-for="member in school.organization" :key="member">{{ member }}</li>
+            </ul>
+        </div>
+
+        <div class="section bg-light p-4 mb-3">
+            <h3>Hình thức hoạt động</h3>
+            <ul>
+                <li v-for="activity in school.activities" :key="activity">{{ activity }}</li>
+            </ul>
+        </div>
+
+        <div class="section bg-light p-4 mb-3">
+            <h3>Liên hệ</h3>
+            <p>Email: info@fe.edu.vn</p>
+            <p>Địa chỉ: Tòa nhà FPT, Khu CNC Hòa Lạc, Km29 Đại lộ Thăng Long, Hà Nội</p>
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                school: {
+                    mission: "FPT tiên phong chuyển đổi số, kiến tạo hạnh phúc, phát triển con người và xây dựng thế giới thông minh trở thành hệ thống giáo dục hàng đầu, đào tạo thế hệ trẻ sáng tạo và hội nhập toàn cầu.",
+                    history: "FPT được thành lập ngày 13/09/1988, từ một công ty nhỏ về công nghệ trở thành tập đoàn hàng đầu Việt Nam, tiên phong trong chuyển đổi số và mở rộng ra thị trường quốc tế. Trường THPT FPT được thành lập với sứ mệnh đổi mới giáo dục, đào tạo học sinh theo phương pháp hiện đại.",
+                    organization: ["Hiệu trưởng: Trương Gia Bình", "Phó hiệu trưởng: Nguyễn Văn Khoa", "Các công ty thành viên: FPT Software, FPT Telecom, FPT Education, FPT Retail...rưởng chuyên môn", "Các phòng ban chuyên môn: Công nghệ, Kinh doanh, Nhân sự, Tài chính..."],
+                    activities: ["Đào tạo chính quy: Cung cấp chương trình học chính khóa từ phổ thông, cao đẳng, đại học đến sau đại học.", "Hoạt động ngoại khóa: Tổ chức các câu lạc bộ, sự kiện, cuộc thi giúp sinh viên phát triển kỹ năng mềm.", "Hợp tác quốc tế: Liên kết với nhiều trường đại học và tổ chức giáo dục trên thế giới để trao đổi sinh viên, chương trình song bằng.", "Hướng nghiệp & Tư vấn: Hỗ trợ sinh viên định hướng nghề nghiệp, kết nối doanh nghiệp để thực tập và tuyển dụng."]
+                }
+            }
+        });
+    </script>
+</body>
+</html>
